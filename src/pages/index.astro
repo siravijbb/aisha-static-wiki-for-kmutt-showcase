@@ -1,107 +1,122 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Navbar from '../components/Navbar.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Navbar from "../components/Navbar.astro";
 ---
 
 <Layout title="Welcome to Aisha Wiki.">
-	<Navbar />
-	<main class="Maincon  gap-4 mx-4 px-4">
-		<h1>Welcome to <span class="text-gradient">Aisha channel information</span></h1>
-		<p class="instructions text-center">
-			This website is build by  <code>Siravij | สิราวิ้จจะบึ</code> Data provided by <code class=""> <a href="https://www.youtube.com/channel/UCQ0UDLQCjY0rmuxCDE38FGg">Aisha channel</a></code>
-		</p>
-	<div class="Aishabasicinfo flex">
-		<div class=" hover:shadow-2xl bg-white hover:bg-neutral-200 shadow-lg rounded-lg ">
-		<p>ไอช่า ไอศิกา วจนโรจน์</p>
-		<p>
-		   <img src="/full-body.png" style="float:left" width="190" height="84" />
-		</p>
-	</div>
-		<p>	ข้อมูลทั่วไป</p>
-	</div>
-	</main>
+  <Navbar />
+  <main class="Maincon gap-4 mx-4 px-4">
+    <h1>
+      Welcome to <span class="text-gradient">Aisha channel information</span>
+    </h1>
+    <p class="instructions text-center">
+      This website is build by <code>Siravij | สิราวิ้จจะบึ</code> Data provided
+      by <code class="">
+        <a href="https://www.youtube.com/channel/UCQ0UDLQCjY0rmuxCDE38FGg"
+          >Aisha channel</a
+        ></code
+      >
+    </p>
+    <div class="Aishabasicinfo flex">
+      <div
+        class="hover:shadow-2xl bg-white hover:bg-neutral-200 shadow-lg rounded-lg"
+      >
+        <p>ไอช่า ไอศิกา วจนโรจน์</p>
+        <p>
+          <img
+            src="/full-body.png"
+            style="float:left"
+            width="190"
+            height="84"
+          />
+        </p>
+      </div>
+      <p>ข้อมูลทั่วไป</p>
+    </div>
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-	.Maincon {
-		font-size: 1.5rem;
-		max-width: 1280px;
-		margin: 40px auto;
-	}
-	* {
-		box-sizing: border-box;
-	}
-	.link-card {
-		list-style: none;
-		display: flex;
-		padding: 0.25rem;
-		background-color: white;
-		background-image: none;
-		background-size: 400%;
-		border-radius: 0.6rem;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-	}
+  main {
+    margin: auto;
+    padding: 1.5rem;
+    max-width: 60ch;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    line-height: 1.6;
+    margin: 1rem 0;
+    border: 1px solid rgba(var(--accent), 25%);
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.4rem;
+  }
+  .instructions code {
+    font-size: 0.875em;
+    font-weight: bold;
+    background: rgba(var(--accent), 12%);
+    color: rgb(var(--accent));
+    border-radius: 4px;
+    padding: 0.3em 0.45em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 1rem;
+    padding: 0;
+  }
+  .Maincon {
+    font-size: 1.5rem;
+    max-width: 1280px;
+    margin: 40px auto;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  .link-card {
+    list-style: none;
+    display: flex;
+    padding: 0.25rem;
+    background-color: white;
+    background-image: none;
+    background-size: 400%;
+    border-radius: 0.6rem;
+    background-position: 100%;
+    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  }
 
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: 1rem 1.3rem;
-		border-radius: 0.35rem;
-		color: #111;
-		background-color: white;
-		opacity: 0.8;
-	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent));
-	}
+  .link-card > a {
+    width: 100%;
+    text-decoration: none;
+    line-height: 1.4;
+    padding: 1rem 1.3rem;
+    border-radius: 0.35rem;
+    color: #111;
+    background-color: white;
+    opacity: 0.8;
+  }
+  .link-card:is(:hover, :focus-within) {
+    background-position: 0;
+    background-image: var(--accent-gradient);
+  }
+  .link-card:is(:hover, :focus-within) h2 {
+    color: rgb(var(--accent));
+  }
 </style>
