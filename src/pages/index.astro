@@ -29,9 +29,9 @@ import Navbar from "../components/Navbar.astro";
     </div>
   </main>
   <div>
-    <div class="md:flex py-10 max-w-7xl px-8 mx-auto">
+    <div class="md:flex py-10 max-w-7xl px-8 mx-auto bg-neutral-200 rounded-lg">
       <div
-        class="hover:shadow-2xl bg-white px-5 shadow-x; rounded-lg text-center item-center mx-auto"
+        class="hover:shadow-2xl bg-white px-5 shadow-x; rounded-lg text-center item-center mx-auto shadow-xl"
       >
         <p class="sm:text-[0.875em] md:text-[0.54em] text-center">
           ไอช่า ไอศิกา วจนโรจน์
@@ -40,17 +40,19 @@ import Navbar from "../components/Navbar.astro";
           <img class="mx-auto" src="/full-body.png" width="190" />
         </p>
       </div>
-      <div class="md:px-10 mx-auto text-ellipsis overflow-hidden">
+      <div
+        class="md:px-10 mx-2 text-ellipsis overflow-hidden bg-white rounded-lg shadow-xl"
+      >
         <h1>ข้อมูลทั่วไป</h1>
         <p>
-          <p>- วันเกิด : 29/7/2003</p>
-          <p>- อายุ : 19 ปี - ส่วนสูง : 155 เซนติเมตร</p>
-          <p>- Lore: เป็นหุ่นยนต์Ai</p>
-          <p>- อิโมจิประจำตัว : 🐱, 💚</p>
-          <p>
+          <li>- วันเกิด : 29/7/2003</li>
+          <li>- อายุ : 19 ปี - ส่วนสูง : 155 เซนติเมตร</li>
+          <li>- Lore: เป็นหุ่นยนต์Ai</li>
+          <li>- อิโมจิประจำตัว : 🐱, 💚</li>
+          <li>
             - แฟนเนม : กุ๊ปเปี้ยน(ส์)*/ Guppiens (มาจากคำว่ากุ๊ปป้า* และ
             โฮโมเซเปี้ยน)
-          </p>
+          </li>
           <p class="text-sm">
             **สามารถสะกดคำว่าGuppiensในภาษาไทยได้ทั้ง กุ๊ปเปี้ยน และ
             กุ๊ปเปี้ยนส์ *กุ๊ปป้า เป็นคำที่ไอช่าใช้เวลาเปิดคลิป/ทักทาย เช่น
@@ -58,25 +60,41 @@ import Navbar from "../components/Navbar.astro";
           </p>
           <p>
             <a href="url:https://www.facebook.com/GAAICompany/">
-              <p class="">- สังกัด : Guardian Angel Ai Co Ltd.</p>
+              <li class="">- สังกัด : Guardian Angel Ai Co Ltd.</li>
             </a>
           </p>
           <div class="grid grid-cols-2">
             <span>
-              - papa : <a href="url:https://twitter.com/Nock3d">
-                <p class="">@Nock3d</p>
+              - papa : <a href="https://twitter.com/Nock3d">
+                <p
+                  class="text-center m-1 p-2 bg-neutral-200 rounded-lg hover:bg-gray-400"
+                >
+                  @Nock3d
+                </p>
               </a>
-              <a href="url:https://twitter.com/Nock3d">
-                <p class="">@bloodink</p></a
+              <a href="https://twitter.com/Nock3d">
+                <p
+                  class="text-center m-1 p-2 bg-neutral-200 rounded-lg hover:bg-gray-400"
+                >
+                  @bloodink
+                </p></a
               >
             </span>
             <span
               >- mama :
-              <a href="url:https://twitter.com/vpkmit">
-                <p class="">@vpkmit</p></a
+              <a href="https://twitter.com/vpkmit">
+                <p
+                  class="text-center m-1 p-2 bg-neutral-200 rounded-lg hover:bg-gray-400"
+                >
+                  @vpkmit
+                </p></a
               >
-              <a href="url:https://twitter.com/mcmclunar">
-                <p class="">@mcmclunar</p></a
+              <a href="https://twitter.com/mcmclunar">
+                <p
+                  class="text-center m-1 p-2 bg-neutral-200 rounded-lg hover:bg-gray-400"
+                >
+                  @mcmclunar
+                </p></a
               >
             </span>
           </div>
