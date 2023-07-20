@@ -1,107 +1,117 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Navbar from '../components/Navbar.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Navbar from "../components/Navbar.astro";
 ---
 
-<Layout title="Welcome to Aisha Wiki.">
-	<Navbar />
-	<main class="Maincon  gap-4 mx-4 px-4">
-		<h1>Welcome to <span class="text-gradient">Aisha channel information</span></h1>
-		<p class="instructions text-center">
-			This website is build by  <code>Siravij | สิราวิ้จจะบึ</code> Data provided by <code class=""> <a href="https://www.youtube.com/channel/UCQ0UDLQCjY0rmuxCDE38FGg">Aisha channel</a></code>
-		</p>
-	<div class="Aishabasicinfo flex">
-		<div class=" hover:shadow-2xl bg-white hover:bg-neutral-200 shadow-lg rounded-lg ">
-		<p>ไอช่า ไอศิกา วจนโรจน์</p>
-		<p>
-		   <img src="/full-body.png" style="float:left" width="190" height="84" />
-		</p>
+<Layout title="Aisha Wiki">
+  <Navbar />
+  <main class="Maincon gap-4 px-4 shadow-xl rounded-xl mx-auto">
+    <div class="instructions">
+      <h1 class="text-center">
+        Welcome to <span class="text-gradient">Aisha channel information</span>
+      </h1>
+      <div class="item-center mx-auto text-sm md:text-md">
+		<p class="text-center break-normal md:break-all mx-auto">
+        This website is build by <code >Siravij | สิราวิ้จจะบึ</code>
+		</p><p class="text-center"> Data provided by <code>
+          <a
+            href="https://pusssinboots.notion.site/pusssinboots/Aisha-channel-information-9104e052397c405e8e39e5223b0ec335"
+            >Aisha Web Database By Puss</a
+          ></code
+        ></p>
+      </p>
+    </div>
 	</div>
-		<p>	ข้อมูลทั่วไป</p>
-	</div>
-	</main>
+    <div>
+      <div class="md:flex py-10">
+        <div
+          class="hover:shadow-2xl bg-white px-5 shadow-x; rounded-lg text-center item-center mx-auto"
+        >
+          <p class="sm:text-[0.875em] md:text-[0.54em] text-center">
+            ไอช่า ไอศิกา วจนโรจน์
+          </p>
+          <p>
+            <img class="mx-auto" src="/full-body.png" width="190" />
+          </p>
+        </div>
+        <div class="sm:px-8 md:px-10 max-w-[87%] text-ellipsis overflow-hidden">
+          <h1>ข้อมูลทั่วไป</h1>
+          <p>
+            <p>- วันเกิด : 29/7/2003</p>
+            <p>- อายุ : 19 ปี - ส่วนสูง : 155 เซนติเมตร</p>
+            <p>- Lore: เป็นหุ่นยนต์Ai</p>
+            <p>- อิโมจิประจำตัว : 🐱, 💚</p>
+            <p>
+              - แฟนเนม : กุ๊ปเปี้ยน(ส์)*/ Guppiens (มาจากคำว่ากุ๊ปป้า* และ
+              โฮโมเซเปี้ยน)
+            </p>
+            <p class="text-sm">
+              **สามารถสะกดคำว่าGuppiensในภาษาไทยได้ทั้ง กุ๊ปเปี้ยน และ
+              กุ๊ปเปี้ยนส์ *กุ๊ปป้า เป็นคำที่ไอช่าใช้เวลาเปิดคลิป/ทักทาย เช่น
+              “กุ๊ปป้า! สวัสดีค่า เวอร์ช่วลไอดอลไอช่า มาแล้วค่า!”*
+            </p>
+            <p>
+              <a href="url:https://www.facebook.com/GAAICompany/">
+                <p class="">- สังกัด : Guardian Angel Ai Co Ltd.</p>
+              </a>
+            </p>
+            <div class="grid grid-cols-2 ">
+              <span>
+                - papa : <a href="url:https://twitter.com/Nock3d">
+                  <p class="">@Nock3d</p>
+                </a>
+                <a href="url:https://twitter.com/Nock3d">
+                  <p class="">@bloodink</p></a
+                >
+              </span>
+              <span
+                >- mama :
+                <a href="url:https://twitter.com/vpkmit">
+                  <p class="">@vpkmit</p></a
+                >
+                <a href="url:https://twitter.com/mcmclunar">
+                  <p class="">@mcmclunar</p></a
+                >
+              </span>
+            </div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <style>
+    .text-gradient {
+      background-image: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 400%;
+      background-position: 0%;
+    }
+    .instructions {
+      line-height: 1.6;
+      margin: 1rem 0;
+      border: 1px solid rgba(var(--accent), 25%);
+      background-color: white;
+      padding: 1rem;
+      border-radius: 0.4rem;
+    }
+    .instructions code {
+      font-size: 0.875em;
+      font-weight: bold;
+      background: rgba(var(--accent), 12%);
+      color: rgb(var(--accent));
+      border-radius: 4px;
+      padding: 0.3em 0.45em;
+    }
+    .instructions strong {
+      color: rgb(var(--accent));
+    }
+    .Maincon {
+      font-size: 1.5rem;
+      max-width: 1280px;
+      margin: 40px auto;
+    }
+  </style>
 </Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-	.Maincon {
-		font-size: 1.5rem;
-		max-width: 1280px;
-		margin: 40px auto;
-	}
-	* {
-		box-sizing: border-box;
-	}
-	.link-card {
-		list-style: none;
-		display: flex;
-		padding: 0.25rem;
-		background-color: white;
-		background-image: none;
-		background-size: 400%;
-		border-radius: 0.6rem;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-	}
-
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: 1rem 1.3rem;
-		border-radius: 0.35rem;
-		color: #111;
-		background-color: white;
-		opacity: 0.8;
-	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent));
-	}
-</style>
