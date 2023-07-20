@@ -29,7 +29,7 @@ import Navbar from "../components/Navbar.astro";
     </div>
   </main>
   <div>
-    <div class="md:flex py-10 max-w-7xl px-8 mx-auto bg-neutral-200 rounded-lg">
+    <div class="md:flex py-10 max-w-7xl px-8 mx-auto bg-neutral-200 rounded-lg text-black">
       <div
         class="hover:shadow-2xl bg-white px-5 shadow-x; rounded-lg text-center item-center mx-auto shadow-xl"
       >
@@ -58,9 +58,9 @@ import Navbar from "../components/Navbar.astro";
             กุ๊ปเปี้ยนส์ *กุ๊ปป้า เป็นคำที่ไอช่าใช้เวลาเปิดคลิป/ทักทาย เช่น
             “กุ๊ปป้า! สวัสดีค่า เวอร์ช่วลไอดอลไอช่า มาแล้วค่า!”*
           </p>
-          <p>
+          <p class="py-2 ">
             <a href="url:https://www.facebook.com/GAAICompany/">
-              <li class="">- สังกัด : Guardian Angel Ai Co Ltd.</li>
+              <li><p class=" inline items-center "> สังกัด : <span><p class="inline text-white bg-black p-2 rounded-lg rounded-lg shadow-lg hover:shadow-xl"><img class="inline mb-1 p-auto items-center h-5 "  src="/ga.jpg"  /></span class=""> Guardian Angel Ai Co Ltd.</p></p></li>
             </a>
           </p>
           <div class="grid grid-cols-2">
@@ -116,7 +116,7 @@ import Navbar from "../components/Navbar.astro";
     line-height: 1.6;
     margin: 1rem 0;
     border: 1px solid rgba(var(--accent), 25%);
-    background-color: white;
+
     padding: 1rem;
     border-radius: 0.4rem;
   }
