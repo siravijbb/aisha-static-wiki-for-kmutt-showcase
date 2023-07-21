@@ -28,12 +28,14 @@ import Navbar from "../components/Navbar.astro";
       </div>
     </div>
   </main>
-  <div>
-    <div class="md:flex py-10 max-w-7xl px-8 mx-auto bg-neutral-200 rounded-lg text-black">
+  <div class="max-w-7xl sm:px-2 md:px-8 mx-auto bg-neutral-200 rounded-lg pb-4">
+    <div
+      class="md:flex py-10 max-w-7xl sm:px-2 md:px-8 mx-auto bg-neutral-200 rounded-lg text-black"
+    >
       <div
-        class="hover:shadow-2xl bg-white px-5 shadow-x; rounded-lg text-center item-center mx-auto shadow-xl"
+        class="flex-auto hover:shadow-2xl bg-white px-5 shadow-x; rounded-lg text-center item-center mx-auto shadow-xl"
       >
-        <p class="sm:text-[0.875em] md:text-[0.54em] text-center">
+        <p class="pt-3 md:pt-2 text-2xl md:text-lg text-center">
           ไอช่า ไอศิกา วจนโรจน์
         </p>
         <p>
@@ -41,9 +43,9 @@ import Navbar from "../components/Navbar.astro";
         </p>
       </div>
       <div
-        class="mt-3 md:mt-0 py-3 md:py-2 px-10 md:ml-2 text-ellipsis overflow-hidden bg-white rounded-lg shadow-xl"
+        class="flex-auto mt-3 md:mt-0 py-3 md:py-2 px-2 md:ml-2 text-ellipsis overflow-hidden bg-white rounded-lg shadow-xl"
       >
-        <h1>ข้อมูลทั่วไป</h1>
+        <h1 class="text-center md:text-left">ข้อมูลทั่วไป</h1>
         <p>
           <li>- วันเกิด : 29/7/2003</li>
           <li>- อายุ : 19 ปี - ส่วนสูง : 155 เซนติเมตร</li>
@@ -55,12 +57,29 @@ import Navbar from "../components/Navbar.astro";
           </li>
           <p class="text-sm">
             **สามารถสะกดคำว่าGuppiensในภาษาไทยได้ทั้ง กุ๊ปเปี้ยน และ
-            กุ๊ปเปี้ยนส์ *กุ๊ปป้า เป็นคำที่ไอช่าใช้เวลาเปิดคลิป/ทักทาย เช่น
-            “กุ๊ปป้า! สวัสดีค่า เวอร์ช่วลไอดอลไอช่า มาแล้วค่า!”*
+            กุ๊ปเปี้ยนส์
           </p>
-          <p class="py-1 ">
+          <p class="text-sm">
+            *กุ๊ปป้า เป็นคำที่ไอช่าใช้เวลาเปิดคลิป/ทักทาย เช่น “กุ๊ปป้า!
+            สวัสดีค่า เวอร์ช่วลไอดอลไอช่า มาแล้วค่า!”*
+          </p>
+          <p class="py-1">
             <a href="https://www.facebook.com/GAAICompany/">
-              <li><p class=" inline items-center "> - สังกัด : <span><p class="inline text-white bg-black p-2 rounded-lg rounded-lg shadow-lg hover:shadow-xl "><img class="inline mb-1 p-auto items-center h-5 "  src="/ga.jpg"  /></span class=""> Guardian Angel Ai Co Ltd.</p></p></li>
+              <li>
+                <p class="inline items-center">
+                  - สังกัด : <span
+                    ><p
+                      class="inline text-white bg-black p-2 rounded-lg rounded-lg shadow-lg hover:shadow-xl"
+                    >
+                      <img
+                        class="inline mb-1 p-auto items-center h-5"
+                        src="/ga.jpg"
+                      />
+                      Guardian Angel Ai Co Ltd.
+                    </p></span
+                  >
+                </p>
+              </li>
             </a>
           </p>
           <div class="py-4 grid grid-cols-2">
@@ -99,6 +118,95 @@ import Navbar from "../components/Navbar.astro";
             </span>
           </div>
         </p>
+      </div>
+    </div>
+    <div
+      class="QNA-AND-MORE -mt-6 mx-0 md:mx-8 text-ellipsis overflow-hidden bg-white rounded-lg shadow-xl"
+    >
+      <p class="text-center md:text-left md:mt-0 py-3 md:py-2 px-2 md:ml-2">
+        FAQ
+      </p>
+      <div id="accordion-arrow-icon" data-accordion="open">
+        <h2 id="accordion-arrow-icon-heading-1">
+          <button
+            type="button"
+            class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-900 bg-gray-100 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800"
+            data-accordion-target="#accordion-arrow-icon-body-1"
+            aria-expanded="true"
+            aria-controls="accordion-arrow-icon-body-1"
+          >
+            <span>ไอช่ามีกี่หู?</span>
+            <svg
+              class="w-4 h-4 shrink-0 -mr-0.5 astro-J7PV25F6"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M7.529 7.988a2.502 2.502 0 0 1 5 .191A2.441 2.441 0 0 1 10 10.582V12m-.01 3.008H10M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                class="astro-J7PV25F6"></path>
+            </svg>
+          </button>
+        </h2>
+        <div
+          id="accordion-arrow-icon-body-1"
+          aria-labelledby="accordion-arrow-icon-heading-1"
+        >
+          <div
+            class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900"
+          >
+            <p class="mb-2 text-gray-500 dark:text-gray-400">
+              Answer : ไอช่ามี4 หู - หูคนสองหู และหูแมวสองหู - หูคนใช้ฟัง
+              ส่วนหูแมวเป็นหูตกแต่งเท่านั้น
+            </p>
+          </div>
+        </div>
+        <h2 id="accordion-arrow-icon-heading-2">
+          <button
+            type="button"
+            class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+            data-accordion-target="#accordion-arrow-icon-body-2"
+            aria-expanded="false"
+            aria-controls="accordion-arrow-icon-body-2"
+          >
+            <span>ไอช่ามีไอดอลที่ชื่นชอบไหม</span>
+            <svg
+              class="w-4 h-4 shrink-0 -mr-0.5 astro-J7PV25F6"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M7.529 7.988a2.502 2.502 0 0 1 5 .191A2.441 2.441 0 0 1 10 10.582V12m-.01 3.008H10M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                class="astro-J7PV25F6"></path>
+            </svg>
+          </button>
+        </h2>
+        <div
+          id="accordion-arrow-icon-body-2"
+          class="hidden"
+          aria-labelledby="accordion-arrow-icon-heading-2"
+        >
+          <div
+            class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 md:flex"
+          >
+            <img src="/jongbts.png" class="md:inline mb-2 h-20 mx-auto" />
+            <p class="flex-auto ml-2 text-gray-500 dark:text-gray-400">
+              Answer : ไอช่าชอบจองกุกBTS
+              วงBTSและจองกุกก็เป็นหนึ่งในแรงบัลดาลใจให้ไอช่าอยากจะมาเป็นไอดอลเช่นกัน
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
