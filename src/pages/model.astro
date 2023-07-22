@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Age Calculator</title>
+  </head>
+  <body>
+    <h1>Age Calculator</h1>
+    <p id="result"></p>
+
+    <script>
+      // Predefined birthdate (YYYY/MM/DD format)
+      const predefinedBirthdate = "2019/07/29";
+
+      window.onload = function () {
+        calculateAge();
+      };
+
+      function calculateAge() {
+        const dateParts = predefinedBirthdate.split("/");
+        const birthYear = parseInt(dateParts[0]);
+        const birthMonth = parseInt(dateParts[1]);
+        const birthDay = parseInt(dateParts[2]);
+
+        const today = new Date();
+        const todayYear = today.getFullYear();
+        const todayMonth = today.getMonth() + 1;
+        const todayDay = today.getDate();
+
+        let ageYears = todayYear - birthYear;
+        let ageMonths = todayMonth - birthMonth;
+        let ageDays = todayDay - birthDay;
+
+        if (ageMonths < 0 || (ageMonths === 0 && ageDays < 0)) {
+          const adjustedAge = adjustAge(
+            todayYear,
+            todayMonth,
+            todayDay,
+            birthYear,
+            birthMonth,
+            birthDay
+          );
+          ageYears = adjustedAge.years;
+          ageMonths = adjustedAge.months;
+          ageDays = adjustedAge.days;
+        }
+
+        document.getElementById(
+          "result"
+        ).innerText = `Your age is ${ageYears} years, ${ageMonths} months, and ${ageDays} days.`;
+      }
+
+      function adjustAge(
+        todayYear,
+        todayMonth,
+        todayDay,
+        birthYear,
+        birthMonth,
+        birthDay
+      ) {
+        let adjustedYears = todayYear - birthYear - 1;
+        let adjustedMonths = 12 - birthMonth + todayMonth;
+        let adjustedDays = 0;
+
+        if (todayDay >= birthDay) {
+          adjustedDays = todayDay - birthDay;
+        } else {
+          adjustedMonths--;
+          const daysInLastMonth = daysInMonth(todayMonth - 1, todayYear);
+          adjustedDays = daysInLastMonth - birthDay + todayDay;
+        }
+
+        if (adjustedMonths >= 12) {
+          adjustedYears++;
+          adjustedMonths -= 12;
+        }
+
+        return {
+          years: adjustedYears,
+          months: adjustedMonths,
+          days: adjustedDays,
+        };
+      }
+
+      function daysInMonth(month, year) {
+        return new Date(year, month, 0).getDate();
+      }
+    </script>
+  </body>
+</html>
