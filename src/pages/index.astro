@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro";
+import AishaB from "../components/aishab.astro";
 ---
 
 <head>
@@ -14,115 +13,7 @@ import Footer from "../components/Footer.astro";
     ,
   />
   <body>
-    <script>
-      // Predefined birthdate (YYYY/MM/DD format)
-      const predefinedBirthdate = "2003/07/29";
-
-      window.onload = function () {
-        calculateAge();
-      };
-
-      function calculateAge() {
-        const dateParts = predefinedBirthdate.split("/");
-        const birthYear = parseInt(dateParts[0]);
-        const birthMonth = parseInt(dateParts[1]);
-        const birthDay = parseInt(dateParts[2]);
-
-        const today = new Date();
-        const todayYear = today.getFullYear();
-        const todayMonth = today.getMonth() + 1;
-        const todayDay = today.getDate();
-
-        let ageYears = todayYear - birthYear;
-        let ageMonths = todayMonth - birthMonth;
-        let ageDays = todayDay - birthDay;
-
-        if (ageMonths < 0 || (ageMonths === 0 && ageDays < 0)) {
-          const adjustedAge = adjustAge(
-            todayYear,
-            todayMonth,
-            todayDay,
-            birthYear,
-            birthMonth,
-            birthDay
-          );
-          ageYears = adjustedAge.years;
-          ageMonths = adjustedAge.months;
-          ageDays = adjustedAge.days;
-        }
-
-        let message = `(${ageYears} ขวบ, ${ageMonths} เดือน, และ ${ageDays} วัน) `;
-
-        if (ageMonths === 0 && ageDays === 0) {
-          agemessege +=
-            "<p class='bg-emerald-400 rounded-lg p-1 block lg:inline text-ellipsis '>สุขสันต์วันเกิดไอช่า!</p>";
-        } else if (todayMonth === birthMonth && todayDay === birthDay) {
-          message +=
-            "<p class='bg-emerald-400 rounded-lg p-1 block lg:inline text-ellipsis '>สุขสันต์วันเกิดไอช่า!</p>";
-        } else if (todayMonth === birthMonth) {
-          message +=
-            "<p class='bg-emerald-400 rounded-lg p-1 block lg:inline text-ellipsis '>สุขสันต์เดือนเกิดไอช่า!</p>";
-        }
-
-        document.getElementById("result").innerHTML = message;
-        setColor();
-      }
-
-      function setColor() {
-        const today = new Date();
-        const todayMonth = today.getMonth() + 1;
-        const todayDay = today.getDate();
-        const birthMonth = parseInt(predefinedBirthdate.split("/")[1]);
-        const birthDay = parseInt(predefinedBirthdate.split("/")[2]);
-
-        const resultElement = document.getElementById("result");
-
-        if (
-          (todayMonth === birthMonth && todayDay === birthDay) ||
-          todayMonth === birthMonth
-        ) {
-          resultElement.classList.add("");
-        } else if (todayDay === birthDay) {
-          resultElement.classList.add("");
-        }
-      }
-
-      function adjustAge(
-        todayYear,
-        todayMonth,
-        todayDay,
-        birthYear,
-        birthMonth,
-        birthDay
-      ) {
-        let adjustedYears = todayYear - birthYear - 1;
-        let adjustedMonths = 12 - birthMonth + todayMonth;
-        let adjustedDays = 0;
-
-        if (todayDay >= birthDay) {
-          adjustedDays = todayDay - birthDay;
-        } else {
-          adjustedMonths--;
-          const daysInLastMonth = daysInMonth(todayMonth - 1, todayYear);
-          adjustedDays = daysInLastMonth - birthDay + todayDay;
-        }
-
-        if (adjustedMonths >= 12) {
-          adjustedYears++;
-          adjustedMonths -= 12;
-        }
-
-        return {
-          years: adjustedYears,
-          months: adjustedMonths,
-          days: adjustedDays,
-        };
-      }
-
-      function daysInMonth(month, year) {
-        return new Date(year, month, 0).getDate();
-      }
-    </script>
+    <AishaB />
     <main
       class="Maincon gap-4 shadow-xl rounded-xl mx-auto customFont text-sm md:text-xl"
     >
