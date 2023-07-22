@@ -4,9 +4,17 @@ import Card from "../components/Card.astro";
 import Navbar from "../components/Navbar.astro";
 ---
 
-<Layout title="Aisha Wiki">
+<head>
+  <Layout
+    title="Home"
+    ,
+    description="Home of Aisha Wiki"
+    ,
+    image="/full-body.png"
+    ,
+  />
   <Navbar />
-  <main class="Maincon gap-4 shadow-xl rounded-xl mx-auto">
+  <body class="Maincon gap-4 shadow-xl rounded-xl mx-auto">
     <div class="instructions">
       <h1 class="text-center text-[1.1rem] md:text-md">
         Welcome to <span class="text-gradient">Aisha channel information</span>
@@ -27,195 +35,202 @@ import Navbar from "../components/Navbar.astro";
         </p>
       </div>
     </div>
-  </main>
-  <div class="max-w-7xl sm:px-2 md:px-8 mx-auto bg-neutral-200 rounded-lg pb-4">
+
     <div
-      class="md:flex py-10 max-w-7xl sm:px-2 md:px-8 mx-auto bg-neutral-200 rounded-lg text-black"
+      class="max-w-7xl sm:px-2 md:px-8 mx-auto bg-neutral-200 rounded-lg pb-4"
     >
       <div
-        class="flex-auto hover:shadow-2xl bg-white px-5 shadow-x; rounded-lg text-center item-center mx-auto shadow-xl"
+        class="md:flex py-10 max-w-7xl sm:px-2 md:px-8 mx-auto bg-neutral-200 rounded-lg text-black"
       >
-        <p class="pt-3 md:pt-2 text-2xl md:text-lg text-center">
-          ไอช่า ไอศิกา วจนโรจน์
-        </p>
-        <p>
-          <img class="mx-auto" src="/full-body.png" width="190" />
-        </p>
-      </div>
-      <div
-        class="flex-auto mt-3 md:mt-0 py-3 md:py-2 px-2 md:ml-2 text-ellipsis overflow-hidden bg-white rounded-lg shadow-xl"
-      >
-        <h1 class="text-center md:text-left">ข้อมูลทั่วไป</h1>
-        <p>
-          <li>- วันเกิด : 29/7/2003</li>
-          <li>- อายุ : 19 ปี - ส่วนสูง : 155 เซนติเมตร</li>
-          <li>- Lore: เป็นหุ่นยนต์Ai</li>
-          <li>- อิโมจิประจำตัว : 🐱, 💚</li>
-          <li>
-            - แฟนเนม : กุ๊ปเปี้ยน(ส์)*/ Guppiens (มาจากคำว่ากุ๊ปป้า* และ
-            โฮโมเซเปี้ยน)
-          </li>
-          <p class="text-sm">
-            **สามารถสะกดคำว่าGuppiensในภาษาไทยได้ทั้ง กุ๊ปเปี้ยน และ
-            กุ๊ปเปี้ยนส์
+        <div
+          class="flex-auto hover:shadow-2xl bg-white px-5 shadow-x; rounded-lg text-center item-center mx-auto shadow-xl"
+        >
+          <p class="pt-3 md:pt-2 text-2xl md:text-lg text-center">
+            ไอช่า ไอศิกา วจนโรจน์
           </p>
-          <p class="text-sm">
-            *กุ๊ปป้า เป็นคำที่ไอช่าใช้เวลาเปิดคลิป/ทักทาย เช่น “กุ๊ปป้า!
-            สวัสดีค่า เวอร์ช่วลไอดอลไอช่า มาแล้วค่า!”*
+          <p>
+            <img class="mx-auto" src="/full-body.png" width="190" />
           </p>
-          <p class="py-1">
+        </div>
+        <div
+          class="flex-auto mt-3 md:mt-0 py-3 md:py-2 px-2 md:ml-2 text-ellipsis overflow-hidden bg-white rounded-lg shadow-xl"
+        >
+          <h1 class="text-center md:text-left">ข้อมูลทั่วไป</h1>
+          <p>
+            <li>- วันเกิด : 29/7/2003</li>
+            <li>- อายุ : 19 ปี - ส่วนสูง : 155 เซนติเมตร</li>
+            <li>- Lore: เป็นหุ่นยนต์Ai</li>
+            <li>- อิโมจิประจำตัว : 🐱, 💚</li>
             <li>
-              <p class="inline items-center">
-                - สังกัด :
-                <a href="https://www.facebook.com/GAAICompany/">
-                  <span
-                    ><p
-                      class="inline text-white bg-black p-2 rounded-lg rounded-lg shadow-lg hover:shadow-xl"
-                    >
-                      <img
-                        class="inline mb-1 p-auto items-center h-5"
-                        src="/ga.jpg"
-                      />
-                      Guardian Angel Ai Co Ltd.
-                    </p></span
-                  >
-                </a>
-              </p>
+              - แฟนเนม : กุ๊ปเปี้ยน(ส์)*/ Guppiens (มาจากคำว่ากุ๊ปป้า* และ
+              โฮโมเซเปี้ยน)
             </li>
-          </p>
-          <div class="py-4 grid grid-cols-2">
-            <span>
-              - papa : <a href="https://twitter.com/Nock3d">
-                <p
-                  class="text-center m-1 p-2 bg-neutral-200 rounded-lg hover:bg-gray-400"
-                >
-                  @Nock3d
+            <p class="text-sm">
+              **สามารถสะกดคำว่าGuppiensในภาษาไทยได้ทั้ง กุ๊ปเปี้ยน และ
+              กุ๊ปเปี้ยนส์
+            </p>
+            <p class="text-sm">
+              *กุ๊ปป้า เป็นคำที่ไอช่าใช้เวลาเปิดคลิป/ทักทาย เช่น “กุ๊ปป้า!
+              สวัสดีค่า เวอร์ช่วลไอดอลไอช่า มาแล้วค่า!”*
+            </p>
+            <p class="py-1">
+              <li>
+                <p class="inline items-center">
+                  - สังกัด :
+                  <a href="https://www.facebook.com/GAAICompany/">
+                    <span
+                      ><p
+                        class="inline text-white bg-black p-2 rounded-lg rounded-lg shadow-lg hover:shadow-xl"
+                      >
+                        <img
+                          class="inline mb-1 p-auto items-center h-5"
+                          src="/ga.jpg"
+                        />
+                        Guardian Angel Ai Co Ltd.
+                      </p></span
+                    >
+                  </a>
                 </p>
-              </a>
-              <a href="https://twitter.com/Nock3d">
-                <p
-                  class="text-center m-1 p-2 bg-neutral-200 rounded-lg hover:bg-gray-400"
+              </li>
+            </p>
+            <div class="py-4 grid grid-cols-2">
+              <span>
+                - papa : <a href="https://twitter.com/Nock3d">
+                  <p
+                    class="text-center m-1 p-2 bg-neutral-200 rounded-lg hover:bg-gray-400"
+                  >
+                    @Nock3d
+                  </p>
+                </a>
+                <a href="https://twitter.com/Nock3d">
+                  <p
+                    class="text-center m-1 p-2 bg-neutral-200 rounded-lg hover:bg-gray-400"
+                  >
+                    @bloodink
+                  </p></a
                 >
-                  @bloodink
-                </p></a
-              >
-            </span>
-            <span
-              >- mama :
-              <a href="https://twitter.com/vpkmit">
-                <p
-                  class="text-center m-1 p-2 bg-neutral-200 rounded-lg hover:bg-gray-400"
+              </span>
+              <span
+                >- mama :
+                <a href="https://twitter.com/vpkmit">
+                  <p
+                    class="text-center m-1 p-2 bg-neutral-200 rounded-lg hover:bg-gray-400"
+                  >
+                    @vpkmit
+                  </p></a
                 >
-                  @vpkmit
-                </p></a
-              >
-              <a href="https://twitter.com/mcmclunar">
-                <p
-                  class="text-center m-1 p-2 bg-neutral-200 rounded-lg hover:bg-gray-400"
+                <a href="https://twitter.com/mcmclunar">
+                  <p
+                    class="text-center m-1 p-2 bg-neutral-200 rounded-lg hover:bg-gray-400"
+                  >
+                    @mcmclunar
+                  </p></a
                 >
-                  @mcmclunar
-                </p></a
-              >
-            </span>
-          </div>
+              </span>
+            </div>
+          </p>
+        </div>
+      </div>
+      <div
+        class="QNA-AND-MORE -mt-6 mx-0 md:mx-8 text-ellipsis overflow-hidden bg-white rounded-lg shadow-xl"
+      >
+        <p class="text-center md:text-left md:mt-0 py-3 md:py-2 px-2 md:ml-2">
+          FAQ
         </p>
-      </div>
-    </div>
-    <div
-      class="QNA-AND-MORE -mt-6 mx-0 md:mx-8 text-ellipsis overflow-hidden bg-white rounded-lg shadow-xl"
-    >
-      <p class="text-center md:text-left md:mt-0 py-3 md:py-2 px-2 md:ml-2">
-        FAQ
-      </p>
-      <div id="accordion-arrow-icon" data-accordion="open">
-        <h2 id="accordion-arrow-icon-heading-1">
-          <button
-            type="button"
-            class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-900 bg-gray-100 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800"
-            data-accordion-target="#accordion-arrow-icon-body-1"
-            aria-expanded="true"
-            aria-controls="accordion-arrow-icon-body-1"
-          >
-            <span>ไอช่ามีกี่หู?</span>
-            <svg
-              class="w-4 h-4 shrink-0 -mr-0.5 astro-J7PV25F6"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 20 20"
+        <div id="accordion-arrow-icon" data-accordion="open">
+          <h2 id="accordion-arrow-icon-heading-1">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-900 bg-gray-100 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800"
+              data-accordion-target="#accordion-arrow-icon-body-1"
+              aria-expanded="true"
+              aria-controls="accordion-arrow-icon-body-1"
             >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M7.529 7.988a2.502 2.502 0 0 1 5 .191A2.441 2.441 0 0 1 10 10.582V12m-.01 3.008H10M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                class="astro-J7PV25F6"></path>
-            </svg>
-          </button>
-        </h2>
-        <div
-          id="accordion-arrow-icon-body-1"
-          aria-labelledby="accordion-arrow-icon-heading-1"
-        >
+              <span>ไอช่ามีกี่หู?</span>
+              <svg
+                class="w-4 h-4 shrink-0 -mr-0.5 astro-J7PV25F6"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7.529 7.988a2.502 2.502 0 0 1 5 .191A2.441 2.441 0 0 1 10 10.582V12m-.01 3.008H10M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  class="astro-J7PV25F6"></path>
+              </svg>
+            </button>
+          </h2>
           <div
-            class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900"
+            id="accordion-arrow-icon-body-1"
+            aria-labelledby="accordion-arrow-icon-heading-1"
           >
-            <ul><p class="mb-2 text-gray-500 dark:text-gray-400">
-              Answer : ไอช่ามี4 หู <li class="text-gray-500 dark:text-gray-400 -mt-3">
-                - หูคนสองหู และหูแมวสองหู
+            <div
+              class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900"
+            >
+              <ul>
+                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                  Answer : ไอช่ามี4 หู <li
+                    class="text-gray-500 dark:text-gray-400 -mt-3"
+                  >
+                    - หูคนสองหู และหูแมวสองหู
+                  </li>
+                  <li class="text-gray-500 dark:text-gray-400">
+                    หูคนใช้ฟัง ส่วนหูแมวเป็นหูตกแต่งเท่านั้น
+                  </li>
+                </p>
               </ul>
-              <li class="text-gray-500 dark:text-gray-400">
-                หูคนใช้ฟัง ส่วนหูแมวเป็นหูตกแต่งเท่านั้น
-              </li></li>
-            </p>
+            </div>
           </div>
-        </div>
-        <h2 id="accordion-arrow-icon-heading-2">
-          <button
-            type="button"
-            class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
-            data-accordion-target="#accordion-arrow-icon-body-2"
-            aria-expanded="false"
-            aria-controls="accordion-arrow-icon-body-2"
-          >
-            <span>ไอช่ามีไอดอลที่ชื่นชอบไหม</span>
-            <svg
-              class="w-4 h-4 shrink-0 -mr-0.5 astro-J7PV25F6"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 20 20"
+          <h2 id="accordion-arrow-icon-heading-2">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+              data-accordion-target="#accordion-arrow-icon-body-2"
+              aria-expanded="false"
+              aria-controls="accordion-arrow-icon-body-2"
             >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M7.529 7.988a2.502 2.502 0 0 1 5 .191A2.441 2.441 0 0 1 10 10.582V12m-.01 3.008H10M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                class="astro-J7PV25F6"></path>
-            </svg>
-          </button>
-        </h2>
-        <div
-          id="accordion-arrow-icon-body-2"
-          class="hidden"
-          aria-labelledby="accordion-arrow-icon-heading-2"
-        >
+              <span>ไอช่ามีไอดอลที่ชื่นชอบไหม</span>
+              <svg
+                class="w-4 h-4 shrink-0 -mr-0.5 astro-J7PV25F6"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7.529 7.988a2.502 2.502 0 0 1 5 .191A2.441 2.441 0 0 1 10 10.582V12m-.01 3.008H10M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  class="astro-J7PV25F6"></path>
+              </svg>
+            </button>
+          </h2>
           <div
-            class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 md:flex"
+            id="accordion-arrow-icon-body-2"
+            class="hidden"
+            aria-labelledby="accordion-arrow-icon-heading-2"
           >
-            <img src="/jongbts.png" class="md:inline mb-2 h-20 mx-auto" />
-            <p class="flex-auto ml-2 text-gray-500 dark:text-gray-400">
-              Answer : ไอช่าชอบจองกุกBTS
-              วงBTSและจองกุกก็เป็นหนึ่งในแรงบัลดาลใจให้ไอช่าอยากจะมาเป็นไอดอลเช่นกัน
-            </p>
+            <div
+              class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 md:flex"
+            >
+              <img src="/jongbts.png" class="md:inline mb-2 h-20 mx-auto" />
+              <p class="flex-auto ml-2 text-gray-500 dark:text-gray-400">
+                Answer : ไอช่าชอบจองกุกBTS
+                วงBTSและจองกุกก็เป็นหนึ่งในแรงบัลดาลใจให้ไอช่าอยากจะมาเป็นไอดอลเช่นกัน
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</Layout>
+  </body>
+</head>
 
 <style>
   .text-gradient {
