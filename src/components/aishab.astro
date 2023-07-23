@@ -36,6 +36,7 @@
     }
 
     let message = `(${ageYears} ขวบ, ${ageMonths} เดือน, และ ${ageDays} วัน) `;
+    let age = `${ageYears}`;
 
     if (ageMonths === 0 && ageDays === 0) {
       message +=
@@ -49,6 +50,7 @@
     }
 
     document.getElementById("result").innerHTML = message;
+    document.getElementById("age").innerHTML = age;
     setColor();
   }
 

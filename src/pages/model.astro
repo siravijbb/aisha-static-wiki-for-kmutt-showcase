@@ -1,89 +1,520 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Age Calculator</title>
-  </head>
-  <body>
-    <h1>Age Calculator</h1>
-    <p id="result"></p>
+---
+import Layout from "../layouts/Layout.astro";
+import AishaB from "../components/aishab.astro";
+---
 
-    <script>
-      // Predefined birthdate (YYYY/MM/DD format)
-      const predefinedBirthdate = "2019/07/29";
+<head>
+  <Layout
+    title="Home"
+    ,
+    description="Home of Aisha Wiki"
+    ,
+    image="/full-body.png"
+    ,
+  />
+</head>
+<body>
+  <div
+    class="max-w-7xl sm:px-2 md:px-8 mx-auto bg-neutral-200 rounded-lg md:pb-20 text-black shadow-xl"
+  >
+    <div class="md:flex py-2 sm:px-2 md:px-8 mx-auto rounded-lg pb-auto"></div>
+    <div
+      class="flex-auto mt-3 md:mt-0 py-3 md:py-2 px-2 md:ml-2 text-sm md:text-xl text-ellipsis overflow-hidden bg-white rounded-lg shadow-xl"
+    >
+      <h1 class="text-center md:text-left">ร่างทั้งหมดของไอช่า</h1>
+      <div class="grind py-4 grid grid-cols-2">
+        <span
+          >- X :
+          <div>
+            <!-- Modal toggle -->
+            <p
+              class="block text-center mx-1 mt-1 bg-neutral-200 rounded-lg hover:bg-gray-400 justify-center items-center"
+            >
+              <button
+                data-modal-target="Model1"
+                data-modal-toggle="Model1"
+                class="w-full h-full py-2"
+                type="button"
+              >
+                <p class="text-center">
+                  <img class="mx-auto" src="/full-body.png" width="20" />
+                  @mcmclunar
+                </p></button
+              >
+            </p>
 
-      window.onload = function () {
-        calculateAge();
-      };
+            <!-- Main modal -->
+            <div
+              id="Model1"
+              tabindex="-1"
+              aria-hidden="true"
+              class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+            >
+              <div class="relative w-full max-w-2xl max-h-full">
+                <!-- Modal content -->
+                <div
+                  class="relative bg-white rounded-lg shadow dark:bg-gray-700"
+                >
+                  <!-- Modal header -->
+                  <div
+                    class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
+                  >
+                    <h3
+                      class="text-xl font-semibold text-gray-900 dark:text-white"
+                    >
+                      Terms of Service
+                    </h3>
+                    <button
+                      type="button"
+                      class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                      data-modal-hide="Model1"
+                    >
+                      <svg
+                        class="w-3 h-3"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 14 14"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"></path>
+                      </svg>
+                      <span class="sr-only">Close modal</span>
+                    </button>
+                  </div>
+                  <!-- Modal body -->
+                  <div class="p-6 space-y-6">
+                    <p
+                      class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                    >
+                      With less than a month to go before the European Union
+                      enacts new consumer privacy laws for its citizens,
+                      companies around the world are updating their terms of
+                      service agreements to comply.
+                    </p>
+                    <p
+                      class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                    >
+                      The European Union’s General Data Protection Regulation
+                      (G.D.P.R.) goes into effect on May 25 and is meant to
+                      ensure a common set of data rights in the European Union.
+                      It requires organizations to notify users as soon as
+                      possible of high-risk data breaches that could personally
+                      affect them.
+                    </p>
+                  </div>
+                  <!-- Modal footer -->
+                  <div
+                    class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600"
+                  >
+                    <button
+                      data-modal-hide="Model1"
+                      type="button"
+                      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                      >I accept</button
+                    >
+                    <button
+                      data-modal-hide="Model1"
+                      type="button"
+                      class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+                      >Decline</button
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <!-- Modal toggle -->
+            <p
+              class="block text-center mx-1 mt-1 bg-neutral-200 rounded-lg hover:bg-gray-400 justify-center items-center"
+            >
+              <button
+                data-modal-target="Model4"
+                data-modal-toggle="Model4"
+                class="w-full h-full py-2"
+                type="button"
+              >
+                <p class="text-center">
+                  <img class="mx-auto" src="/full-body.png" width="20" />
+                  @mcmclunar
+                </p></button
+              >
+            </p>
 
-      function calculateAge() {
-        const dateParts = predefinedBirthdate.split("/");
-        const birthYear = parseInt(dateParts[0]);
-        const birthMonth = parseInt(dateParts[1]);
-        const birthDay = parseInt(dateParts[2]);
+            <!-- Main modal -->
+            <div
+              id="Model4"
+              tabindex="-1"
+              aria-hidden="true"
+              class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+            >
+              <div class="relative w-full max-w-2xl max-h-full">
+                <!-- Modal content -->
+                <div
+                  class="relative bg-white rounded-lg shadow dark:bg-gray-700"
+                >
+                  <!-- Modal header -->
+                  <div
+                    class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
+                  >
+                    <h3
+                      class="text-xl font-semibold text-gray-900 dark:text-white"
+                    >
+                      Terms of Service
+                    </h3>
+                    <button
+                      type="button"
+                      class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                      data-modal-hide="Model4"
+                    >
+                      <svg
+                        class="w-3 h-3"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 14 14"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"></path>
+                      </svg>
+                      <span class="sr-only">Close modal</span>
+                    </button>
+                  </div>
+                  <!-- Modal body -->
+                  <div class="p-6 space-y-6">
+                    <p
+                      class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                    >
+                      With less than a month to go before the European Union
+                      enacts new consumer privacy laws for its citizens,
+                      companies around the world are updating their terms of
+                      service agreements to comply.
+                    </p>
+                  </div>
+                  <!-- Modal footer -->
+                  <div
+                    class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600"
+                  >
+                    <button
+                      data-modal-hide="Model4"
+                      type="button"
+                      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                      >I accept</button
+                    >
+                    <button
+                      data-modal-hide="Model4"
+                      type="button"
+                      class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+                      >Decline</button
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <!-- Modal toggle -->
+            <p
+              class="block text-center mx-1 mt-1 bg-neutral-200 rounded-lg hover:bg-gray-400 justify-center items-center"
+            >
+              <button
+                data-modal-target="Model4"
+                data-modal-toggle="Model4"
+                class="w-full h-full py-2"
+                type="button"
+              >
+                <p class="text-center">
+                  <img class="mx-auto" src="/full-body.png" width="20" />
+                  @mcmclunar
+                </p></button
+              >
+            </p>
 
-        const today = new Date();
-        const todayYear = today.getFullYear();
-        const todayMonth = today.getMonth() + 1;
-        const todayDay = today.getDate();
+            <!-- Main modal -->
+            <div
+              id="Model5"
+              tabindex="-1"
+              aria-hidden="true"
+              class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+            >
+              <div class="relative w-full max-w-2xl max-h-full">
+                <!-- Modal content -->
+                <div
+                  class="relative bg-white rounded-lg shadow dark:bg-gray-700"
+                >
+                  <!-- Modal header -->
+                  <div
+                    class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
+                  >
+                    <h3
+                      class="text-xl font-semibold text-gray-900 dark:text-white"
+                    >
+                      Terms of Service
+                    </h3>
+                    <button
+                      type="button"
+                      class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                      data-modal-hide="Model5"
+                    >
+                      <svg
+                        class="w-3 h-3"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 14 14"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"></path>
+                      </svg>
+                      <span class="sr-only">Close modal</span>
+                    </button>
+                  </div>
+                  <!-- Modal body -->
+                  <div class="p-6 space-y-6">
+                    <p
+                      class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                    >
+                      With less than a month to go before the European Union
+                      enacts new consumer privacy laws for its citizens,
+                      companies around the world are updating their terms of
+                      service agreements to comply.
+                    </p>
+                  </div>
+                  <!-- Modal footer -->
+                  <div
+                    class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600"
+                  >
+                    <button
+                      data-modal-hide="Model5"
+                      type="button"
+                      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                      >I accept</button
+                    >
+                    <button
+                      data-modal-hide="Model5"
+                      type="button"
+                      class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+                      >Decline</button
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </span>
+        <span
+          >Y
+          <div>
+            <!-- Modal toggle -->
+            <p
+              class="block text-center mx-1 mt-1 bg-neutral-200 rounded-lg hover:bg-gray-400 justify-center items-center"
+            >
+              <button
+                data-modal-target="Model2"
+                data-modal-toggle="Model2"
+                class="w-full h-full py-2"
+                type="button"
+              >
+                <p class="text-center">
+                  <img class="mx-auto" src="/full-body.png" width="20" />
+                  @mcmclunar
+                </p></button
+              >
+            </p>
 
-        let ageYears = todayYear - birthYear;
-        let ageMonths = todayMonth - birthMonth;
-        let ageDays = todayDay - birthDay;
+            <!-- Main modal -->
+            <div
+              id="Model2"
+              tabindex="-1"
+              aria-hidden="true"
+              class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+            >
+              <div class="relative w-full max-w-2xl max-h-full">
+                <!-- Modal content -->
+                <div
+                  class="relative bg-white rounded-lg shadow dark:bg-gray-700"
+                >
+                  <!-- Modal header -->
+                  <div
+                    class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
+                  >
+                    <h3
+                      class="text-xl font-semibold text-gray-900 dark:text-white"
+                    >
+                      Terms of Service
+                    </h3>
+                    <button
+                      type="button"
+                      class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                      data-modal-hide="Model2"
+                    >
+                      <svg
+                        class="w-3 h-3"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 14 14"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"></path>
+                      </svg>
+                      <span class="sr-only">Close modal</span>
+                    </button>
+                  </div>
+                  <!-- Modal body -->
+                  <div class="p-6 space-y-6">
+                    <p
+                      class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                    >
+                      With less than a month to go before the European Union
+                      enacts new consumer privacy laws for its citizens,
+                      companies around the world are updating their terms of
+                      service agreements to comply.
+                    </p>
+                    <p
+                      class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                    >
+                      The European Union’s General Data Protection Regulation
+                      (G.D.P.R.) goes into effect on May 25 and is meant to
+                      ensure a common set of data rights in the European Union.
+                      It requires organizations to notify users as soon as
+                      possible of high-risk data breaches that could personally
+                      affect them.
+                    </p>
+                  </div>
+                  <!-- Modal footer -->
+                  <div
+                    class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600"
+                  >
+                    <button
+                      data-modal-hide="Model2"
+                      type="button"
+                      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                      >I accept</button
+                    >
+                    <button
+                      data-modal-hide="Model2"
+                      type="button"
+                      class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+                      >Decline</button
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <!-- Modal toggle -->
+            <p
+              class="block text-center mx-1 mt-1 bg-neutral-200 rounded-lg hover:bg-gray-400 justify-center items-center"
+            >
+              <button
+                data-modal-target="Model4"
+                data-modal-toggle="Model4"
+                class="w-full h-full py-2"
+                type="button"
+              >
+                <p class="text-center">
+                  <img class="mx-auto" src="/full-body.png" width="20" />
+                  @mcmclunar
+                </p></button
+              >
+            </p>
 
-        if (ageMonths < 0 || (ageMonths === 0 && ageDays < 0)) {
-          const adjustedAge = adjustAge(
-            todayYear,
-            todayMonth,
-            todayDay,
-            birthYear,
-            birthMonth,
-            birthDay
-          );
-          ageYears = adjustedAge.years;
-          ageMonths = adjustedAge.months;
-          ageDays = adjustedAge.days;
-        }
-
-        document.getElementById(
-          "result"
-        ).innerText = `Your age is ${ageYears} years, ${ageMonths} months, and ${ageDays} days.`;
-      }
-
-      function adjustAge(
-        todayYear,
-        todayMonth,
-        todayDay,
-        birthYear,
-        birthMonth,
-        birthDay
-      ) {
-        let adjustedYears = todayYear - birthYear - 1;
-        let adjustedMonths = 12 - birthMonth + todayMonth;
-        let adjustedDays = 0;
-
-        if (todayDay >= birthDay) {
-          adjustedDays = todayDay - birthDay;
-        } else {
-          adjustedMonths--;
-          const daysInLastMonth = daysInMonth(todayMonth - 1, todayYear);
-          adjustedDays = daysInLastMonth - birthDay + todayDay;
-        }
-
-        if (adjustedMonths >= 12) {
-          adjustedYears++;
-          adjustedMonths -= 12;
-        }
-
-        return {
-          years: adjustedYears,
-          months: adjustedMonths,
-          days: adjustedDays,
-        };
-      }
-
-      function daysInMonth(month, year) {
-        return new Date(year, month, 0).getDate();
-      }
-    </script>
-  </body>
-</html>
+            <!-- Main modal -->
+            <div
+              id="Model4"
+              tabindex="-1"
+              aria-hidden="true"
+              class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+            >
+              <div class="relative w-full max-w-2xl max-h-full">
+                <!-- Modal content -->
+                <div
+                  class="relative bg-white rounded-lg shadow dark:bg-gray-700"
+                >
+                  <!-- Modal header -->
+                  <div
+                    class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
+                  >
+                    <h3
+                      class="text-xl font-semibold text-gray-900 dark:text-white"
+                    >
+                      Terms of Service
+                    </h3>
+                    <button
+                      type="button"
+                      class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                      data-modal-hide="Model4"
+                    >
+                      <svg
+                        class="w-3 h-3"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 14 14"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"></path>
+                      </svg>
+                      <span class="sr-only">Close modal</span>
+                    </button>
+                  </div>
+                  <!-- Modal body -->
+                  <div class="p-6 space-y-6">
+                    <p
+                      class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                    >
+                      With less than a month to go before the European Union
+                      enacts new consumer privacy laws for its citizens,
+                      companies around the world are updating their terms of
+                      service agreements to comply.
+                    </p>
+                  </div>
+                  <!-- Modal footer -->
+                  <div
+                    class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600"
+                  >
+                    <button
+                      data-modal-hide="Model4"
+                      type="button"
+                      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                      >I accept</button
+                    >
+                    <button
+                      data-modal-hide="Model4"
+                      type="button"
+                      class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+                      >Decline</button
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </span>
+      </div>
+    </div>
+  </div>
+</body>
