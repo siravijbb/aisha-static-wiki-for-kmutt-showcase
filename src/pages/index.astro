@@ -38,11 +38,9 @@ import AishaB from "../components/aishab.astro";
       </div>
 
       <div
-        class="max-w-7xl sm:px-2 md:px-8 mx-auto bg-neutral-200 rounded-lg md:pb-20"
+        class="max-w-7xl sm:px-2 md:px-8 mx-auto bg-neutral-200 rounded-lg md:pb-20 text-black"
       >
-        <div
-          class="md:flex py-10 max-w-7xl sm:px-2 md:px-8 mx-auto bg-neutral-200 rounded-lg pb-auto text-black"
-        >
+        <div class="md:flex py-10 sm:px-2 md:px-8 mx-auto rounded-lg pb-auto">
           <div
             class="flex-auto hover:shadow-2xl bg-white px-5 shadow-x; rounded-lg text-center item-center mx-auto shadow-xl"
           >
@@ -137,7 +135,10 @@ import AishaB from "../components/aishab.astro";
         <div
           class="QNA-AND-MORE -m-6 mx-0 md:mx-8 text-sm md:text-xl text-ellipsis overflow-hidden bg-white rounded-lg shadow-xl"
         >
-          <p class="text-center md:text-left md:mt-0 py-3 md:py-2 px-2 md:ml-2">
+          <p
+            class="text-center md:text-left md:mt-0 py-3 md:py-2 px-2 md:ml-2"
+            id="FAQ"
+          >
             FAQ
           </p>
           <div id="accordion-arrow-icon" data-accordion="open">
@@ -232,48 +233,100 @@ import AishaB from "../components/aishab.astro";
             </div>
           </div>
         </div>
+
+        <div
+          class="mt-10 mx-0 md:mx-8 text-sm md:text-xl text-ellipsis overflow-hidden bg-white rounded-lg shadow-xl"
+        >
+          <div
+            class="text-center md:text-left md:mt-0 py-3 md:py-2 px-2 md:ml-2"
+          >
+            DataBase
+          </div>
+          <a class="" href="/model"
+            ><div
+              class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800"
+            >
+              Model ของ Aisha
+            </div></a
+          >
+          <a class="" href="#/channels"
+            ><div
+              class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+            >
+              ช่องทางทั้งหมดของไอช่า
+            </div></a
+          >
+          <a class="" href="#/Songs"
+            ><div
+              class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+            >
+              Original songs
+            </div></a
+          >
+          <a class="" href="#/voice-over"
+            ><div
+              class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+            >
+              ตัวละครที่ไอช่าพากย์ + ช่องทางถูกลิขสิทธิ์
+            </div></a
+          >
+          <a class="" href="#/Likes"
+            ><div
+              class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+            >
+              สิ่งที่ไอช่าชอบและไม่ชอบ
+            </div></a
+          >
+          <a class="" href="#/Appearances"
+            ><div
+              class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+            >
+              เกมที่มีไอช่าอยู่
+            </div></a
+          >
+        </div>
       </div>
     </main>
   </body>
+
+  <style>
+    .text-gradient {
+      background-image: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 400%;
+      background-position: 0%;
+    }
+    .instructions {
+      line-height: 1.6;
+      margin: 1rem 0;
+      border: 1px solid rgba(var(--accent), 25%);
+
+      padding: 1rem;
+      border-radius: 0.4rem;
+    }
+    .instructions code {
+      font-size: 0.875em;
+      font-weight: bold;
+      background: rgba(var(--accent), 12%);
+      color: rgb(var(--accent));
+      border-radius: 4px;
+      padding: 0.3em 0.45em;
+    }
+    .instructions strong {
+      color: rgb(var(--accent));
+    }
+    .Maincon {
+      font-size: 1.5rem;
+      max-width: 1280px;
+      margin: 40px auto;
+    }
+
+    .happy-birth-month {
+      color: blue; /* Change the color for "Happy Birth Month" */
+    }
+    .happy-birth-day {
+      colo: green; /* Change the color for "Happy Birth Day" */
+    }
+  </style>
 </head>
-
-<style>
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
-  .instructions {
-    line-height: 1.6;
-    margin: 1rem 0;
-    border: 1px solid rgba(var(--accent), 25%);
-
-    padding: 1rem;
-    border-radius: 0.4rem;
-  }
-  .instructions code {
-    font-size: 0.875em;
-    font-weight: bold;
-    background: rgba(var(--accent), 12%);
-    color: rgb(var(--accent));
-    border-radius: 4px;
-    padding: 0.3em 0.45em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent));
-  }
-  .Maincon {
-    font-size: 1.5rem;
-    max-width: 1280px;
-    margin: 40px auto;
-  }
-
-  .happy-birth-month {
-    color: blue; /* Change the color for "Happy Birth Month" */
-  }
-  .happy-birth-day {
-    colo: green; /* Change the color for "Happy Birth Day" */
-  }
-</style>
