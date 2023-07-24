@@ -271,12 +271,7 @@ import Footer from "../components/Footer.astro";
               <p class="ml-2 text-gray-500 dark:text-gray-400">
                 Answer : ไอช่ามี 5 ช่องทางติดตาม
               </p>
-              <style>
-                .col-span-middle {
-                  grid-column: span 2;
-                  text-align: center;
-                }
-              </style>
+
 
               <div class="flex text-sm grid-cols-2 mx-auto py-auto text-center">
                 <a
@@ -392,11 +387,8 @@ import Footer from "../components/Footer.astro";
     max-width: 1280px;
     margin: 40px auto;
   }
-
-  .happy-birth-month {
-    color: blue; /* Change the color for "Happy Birth Month" */
-  }
-  .happy-birth-day {
-    colo: green; /* Change the color for "Happy Birth Day" */
-  }
+  .col-span-middle {
+          grid-column: span 2;
+          text-align: center;
+        }
 </style>
