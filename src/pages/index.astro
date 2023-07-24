@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import AishaB from "../components/script/aishab.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <head>
@@ -127,8 +128,8 @@ import AishaB from "../components/script/aishab.astro";
                     class="text-center m-1 p-2 bg-neutral-200 rounded-lg hover:bg-gray-400"
                   >
                     @mcmclunar
-                  </p></a
-                >
+                  </p>
+                </a>
               </span>
             </div>
           </p>
@@ -233,6 +234,75 @@ import AishaB from "../components/script/aishab.astro";
               </p>
             </div>
           </div>
+          <h2 id="accordion-arrow-icon-heading-3">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+              data-accordion-target="#accordion-arrow-icon-body-3"
+              aria-expanded="false"
+              aria-controls="accordion-arrow-icon-body-3"
+            >
+              <span>ช่องทางทั้งหมดของไอช่า</span>
+              <svg
+                class="w-4 h-4 shrink-0 -mr-0.5 astro-J7PV25F6"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7.529 7.988a2.502 2.502 0 0 1 5 .191A2.441 2.441 0 0 1 10 10.582V12m-.01 3.008H10M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  class="astro-J7PV25F6"></path>
+              </svg>
+            </button>
+          </h2>
+          <div
+            id="accordion-arrow-icon-body-3"
+            class="hidden"
+            aria-labelledby="accordion-arrow-icon-heading-3"
+          >
+            <div
+              class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 md:flex"
+            >
+              <p class="ml-2 text-gray-500 dark:text-gray-400">
+                Answer : ไอช่ามี 5 ช่องทางติดตาม
+              </p>
+              <style>
+                .col-span-middle {
+                  grid-column: span 2;
+                  text-align: center;
+                }
+              </style>
+
+              <div class="flex text-sm grid-cols-2 mx-auto py-auto text-center">
+                <a
+                  class="text-center p-1 bg-red-600 rounded-lg hover:bg-red-400 m-1"
+                  href="https://www.youtube.com/@AishaChannel">Youtube</a
+                >
+                <a
+                  class="text-center p-1 bg-[#4267B2] rounded-lg hover:bg-blue-400 m-1"
+                  href="https://www.facebook.com/AishaChannelOfficial"
+                  >Facebook</a
+                >
+                <a
+                  class="text-center p-1 bg-[#00acee] rounded-lg hover:bg-sky-300 m-1"
+                  href="https://twitter.com/Aisha_Channel">Twitter</a
+                >
+                <a
+                  class="text-center p-1 hover:bg-gray-400 bg-gradient-to-r from-pink-500 via-purple-500 to-purple-600 rounded-lg m-1"
+                  href="https://www.instagram.com/aisha.aisika/">Instagram</a
+                >
+                <a
+                  class="text-white col-span-middle col-span-2 p-1 bg-black rounded-lg hover:bg-gray-600 m-1"
+                  href="https://www.tiktok.com/@aishachannel8">Tiktok</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -249,7 +319,7 @@ import AishaB from "../components/script/aishab.astro";
             Model ของ Aisha
           </div></a
         >
-        <a class="" href="#/channels"
+        <a class="" href="/channels"
           ><div
             class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
           >
@@ -287,6 +357,7 @@ import AishaB from "../components/script/aishab.astro";
       </div>
     </div>
   </main>
+  <Footer />
 </body>
 
 <style>
