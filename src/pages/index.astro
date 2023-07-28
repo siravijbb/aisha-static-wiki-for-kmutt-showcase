@@ -53,14 +53,14 @@ import IndexModel from "../components/database/model.astro";
             ไอช่า ไอศิกา วจนโรจน์
           </p>
           <p>
-            <img class="mx-auto" src="/full-body.webp" width="190" />
+            <img class="mx-auto" src="/full-body.webp" width="190" height="auto" alt="Aisha full body" />
           </p>
         </div>
         <div
           class="flex-auto mt-3 md:mt-0 py-3 md:py-2 px-2 md:ml-2 text-sm md:text-xl text-ellipsis overflow-hidden bg-white rounded-lg shadow-xl"
         >
           <h1 class="text-center md:text-left">ข้อมูลทั่วไป</h1>
-          <p>
+          <p><ol>
             <li>
               - วันเกิด : 29/7/2003 <p class="inline text-sm" id="result"></p>
             </li>
@@ -85,21 +85,22 @@ import IndexModel from "../components/database/model.astro";
               <li>
                 <p class="inline items-center">
                   - สังกัด :
-                  <a href="https://www.facebook.com/GAAICompany/">
+                  <a href="https://www.facebook.com/GAAICompany/" aria-label="Guardian Angel Ai Co Ltd Facebook Page">
                     <span
                       ><p
                         class="inline text-white bg-black p-1 rounded-lg shadow-lg hover:shadow-xl"
                       >
                         <img
-                          class="inline mb-1 p-auto items-center h-5"
+                          class="inline mb-1 p-auto items-center h-5 w-auto"
                           src="/ga.webp"
+                          alt="Guardian Angel Ai Co Ltd. Logo"
                         />
                         Guardian Angel Ai Co Ltd.
                       </p></span
                     >
                   </a>
                 </p>
-              </li>
+              </li></ol>
             </p>
             <div class="py-4 grid grid-cols-2">
               <span>
