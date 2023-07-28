@@ -20,6 +20,7 @@
     let ageYears = todayYear - birthYear;
     let ageMonths = todayMonth - birthMonth;
     let ageDays = todayDay - birthDay;
+		let debut = todayYear - (birthYear+16);
 
     if (ageMonths < 0 || (ageMonths === 0 && ageDays < 0)) {
       const adjustedAge = adjustAge(
@@ -37,6 +38,7 @@
 
     let message = `(${ageYears} ขวบ, ${ageMonths} เดือน, และ ${ageDays} วัน) `;
     let age = `${ageYears}`;
+    let debut = '${debutYear}';
 
     if (ageMonths === 0 && ageDays === 0) {
       message +=
@@ -51,6 +53,7 @@
 
     document.getElementById("result").innerHTML = message;
     document.getElementById("age").innerHTML = age;
+    document.getElementById("debut").innerHTML = debut;
     setColor();
   }
 
