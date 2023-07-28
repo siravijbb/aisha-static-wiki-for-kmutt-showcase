@@ -27,21 +27,24 @@
     );
   }
 
-  // Get the current URL path
-  const currentPath = window.location.pathname;
+  // Get the current URL hash
+  const currentHash = window.location.hash;
 
   // Check for different pages and highlight corresponding links
-  if (currentPath.includes("/model")) {
-    highlightLink('a[href="/model"]');
+  if (currentHash === "#FAQ") {
+    highlightLink('a[href="/#FAQ"]');
     highlightLink("#dropdownNavbarLink");
-  } else if (currentPath.includes("/channels")) {
-    highlightLink('a[href="/channels"]');
-    highlightLink("#dropdownNavbarLink");
+  } else if (currentHash === "#channels") {
+    highlightLink('a[href="/#channels"]');
+    highlightLink("#dropdownNavbarLink");}
     // Add more links to highlight for the "other-page" here if needed
-  } else if (currentPath.includes("/another-page")) {
-    highlightLink('a[href="/another-page"]');
-    // Add more links to highlight for the "another-page" here if needed
-  } else {
+     else if (currentHash === "#model") {
+      highlightLink('a[href="/#model"]');
+          highlightLink("#dropdownNavbarLink");
+    } else if (currentHash === "#songs") {
+      highlightLink('a[href="/#songs"]');
+      highlightLink("#dropdownNavbarLink");
+    }  else {
     // Default highlighting for the home page
     highlightLink('a[href="/"]');
   }
