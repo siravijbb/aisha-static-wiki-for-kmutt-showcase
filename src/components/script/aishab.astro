@@ -20,7 +20,7 @@
     let ageYears = todayYear - birthYear;
     let ageMonths = todayMonth - birthMonth;
     let ageDays = todayDay - birthDay;
-		let debut = todayYear - (birthYear+16);
+		let debutYears = todayYear - (birthYear+16);
 
     if (ageMonths < 0 || (ageMonths === 0 && ageDays < 0)) {
       const adjustedAge = adjustAge(
