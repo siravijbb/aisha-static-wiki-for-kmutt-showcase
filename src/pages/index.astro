@@ -5,7 +5,8 @@ import Footer from "../components/Footer.astro";
 import FAQ1 from "../components/FAQ/faq1.astro";
 import FAQ2 from "../components/FAQ/faq2.astro";
 import FAQ3 from "../components/FAQ/faq3.astro";
-import IndexModel from "../components/database/model.astro";
+import IndexModel from "../components/database/model/model.astro";
+import IndexSongs from "../components/database/songs/songs.astro";
 ---
 
 <head>
@@ -165,20 +166,7 @@ import IndexModel from "../components/database/model.astro";
         </div>
         <div id="accordion-arrow-icon" data-accordion="open">
           <IndexModel />
-          <a class="" href="/channels"
-            ><div
-              class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
-            >
-              ช่องทางทั้งหมดของไอช่า
-            </div></a
-          >
-          <a class="" href="#/Songs"
-            ><div
-              class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
-            >
-              Original songs
-            </div></a
-          >
+          <IndexSongs />
           <a class="" href="#/voice-over"
             ><div
               class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
