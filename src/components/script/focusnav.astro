@@ -36,15 +36,16 @@
     highlightLink("#dropdownNavbarLink");
   } else if (currentHash === "#channels") {
     highlightLink('a[href="/#channels"]');
-    highlightLink("#dropdownNavbarLink");}
-    // Add more links to highlight for the "other-page" here if needed
-     else if (currentHash === "#model") {
-      highlightLink('a[href="/#model"]');
-          highlightLink("#dropdownNavbarLink");
-    } else if (currentHash === "#songs") {
-      highlightLink('a[href="/#songs"]');
-      highlightLink("#dropdownNavbarLink");
-    }  else {
+    highlightLink("#dropdownNavbarLink");
+  }
+  // Add more links to highlight for the "other-page" here if needed
+  else if (currentHash === "#model") {
+    highlightLink('a[href="/#model"]');
+    highlightLink("#dropdownNavbarLink");
+  } else if (currentHash === "#songs") {
+    highlightLink('a[href="/#songs"]');
+    highlightLink("#dropdownNavbarLink");
+  } else {
     // Default highlighting for the home page
     highlightLink('a[href="/"]');
   }
