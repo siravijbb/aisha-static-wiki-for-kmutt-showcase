@@ -20,7 +20,9 @@
     let ageYears = todayYear - birthYear;
     let ageMonths = todayMonth - birthMonth;
     let ageDays = todayDay - birthDay;
-		let debutYears = todayYear - (birthYear+16);
+    let debutYears = todayYear - 2019;
+    let debutMonth = todayMonth - 07;
+    let debutDays = todayDay - 29;
 
     if (ageMonths < 0 || (ageMonths === 0 && ageDays < 0)) {
       const adjustedAge = adjustAge(
@@ -36,24 +38,23 @@
       ageDays = adjustedAge.days;
     }
 
-    let message = `(${ageYears} ขวบ, ${ageMonths} เดือน, และ ${ageDays} วัน) `;
+    let message = `(${ageYears} ขวบ, ${ageMonths} เดือน, และ ${ageDays} วัน) (เดบิวต์มาแล้ว ${debutYears} ปี, ${debutMonth} เดือน,  และ ${debutDays} วัน) `;
     let age = `${ageYears}`;
-    let debut = '${debutYears}';
+
 
     if (ageMonths === 0 && ageDays === 0) {
       message +=
-        "<p class='bg-emerald-400 rounded-lg p-1 block lg:inline text-ellipsis '>สุขสันต์วันเกิดไอช่า!</p>";
+        "<p class='bg-emerald-400 rounded-lg p-1 block lg:inline text-ellipsis '>สุขสันต์วันเกิดและครบรอบเดบิวต์ไอช่า!</p>";
     } else if (todayMonth === birthMonth && todayDay === birthDay) {
       message +=
-        "<p class='bg-emerald-400 rounded-lg p-1 block lg:inline text-ellipsis '>สุขสันต์วันเกิดไอช่า!</p>";
+        "<p class='bg-emerald-400 rounded-lg p-1 block lg:inline text-ellipsis '>สุขสันต์วันเกิดและเดบิวต์ไอช่า!</p>";
     } else if (todayMonth === birthMonth) {
       message +=
-        "<p class='bg-emerald-400 rounded-lg p-1 block lg:inline text-ellipsis '>สุขสันต์เดือนเกิดไอช่า!</p>";
+        "<p class='bg-emerald-400 rounded-lg p-1 block lg:inline text-ellipsis '>สุขสันต์เดือนเกิดและเดบิวต์ไอช่า!</p>";
     }
 
     document.getElementById("result").innerHTML = message;
     document.getElementById("age").innerHTML = age;
-    document.getElementById("debut").innerHTML = debut;
     setColor();
   }
 
