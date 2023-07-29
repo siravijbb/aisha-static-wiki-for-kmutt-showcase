@@ -38,25 +38,25 @@
       ageDays = adjustedAge.days;
     }
 
-    let message = `(${ageYears} ขวบ, ${ageMonths} เดือน, และ ${ageDays} วัน) (เดบิวต์มาแล้ว ${debutYears} ปี, ${debutMonth} เดือน,  และ ${debutDays} วัน) `;
+    let message = `(${ageYears} ขวบ, ${ageMonths} เดือน, และ ${ageDays} วัน)`;
     let age = `${ageYears}`;
     let debutAnnment = ``;
-
+    let debutCount = `(เดบิวต์มาแล้ว ${debutYears} ปี, ${debutMonth} เดือน,  และ ${debutDays} วัน) `;
 
 
 
     if (ageMonths === 0 && ageDays === 0) {
-      message +=
+      debutCount +=
         "<p class='bg-emerald-400 rounded-lg p-1 block xl:inline text-ellipsis '>สุขสันต์วันเกิดและครบรอบเดบิวต์ไอช่า!</p>";
       debutAnnment +=
         "<p class='bg-emerald-400 rounded-lg p-1 text-ellipsis text-center '>สุขสันต์วันเกิดและครบรอบเดบิวต์ไอช่า!</p>";
     } else if (todayMonth === birthMonth && todayDay === birthDay) {
-      message +=
+      debutCount +=
         "<p class='bg-emerald-400 rounded-lg p-1 block xl:inline text-ellipsis '>สุขสันต์วันเกิดและครบรอบเดบิวต์ไอช่า!</p>";
        debutAnnment +=
         "<p class='bg-emerald-400 rounded-lg p-1 text-ellipsis text-center '>สุขสันต์วันเกิดและครบรอบเดบิวต์ไอช่า!</p>";
     } else if (todayMonth === birthMonth) {
-      message +=
+      debutCount +=
         "<p class='bg-emerald-400 rounded-lg p-1 block xl:inline text-ellipsis '>สุขสันต์เดือนเกิดและเดือนเดบิวต์ไอช่า!</p>";
           debutAnnment +=
         "<p class='bg-emerald-400 rounded-lg p-1 text-ellipsis text-center '>สุขสันต์เดือนเกิดและครบรอบเดบิวต์ไอช่า!</p>";
@@ -65,7 +65,7 @@
     document.getElementById("result").innerHTML = message;
     document.getElementById("age").innerHTML = age;
     document.getElementById("debutAnnment").innerHTML = debutAnnment;
-    
+    document.getElementById("debutCount").intnerHTML = debutCount;
     setColor();
   }
 
