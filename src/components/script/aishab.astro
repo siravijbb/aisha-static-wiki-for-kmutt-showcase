@@ -20,28 +20,40 @@
     let ageYears = todayYear - birthYear;
     let ageMonths = todayMonth - birthMonth;
     let ageDays = todayDay - birthDay;
+
+    // ... (previous code)
+
     let debutYears = todayYear - 2019;
     let debutMonth = todayMonth - 7;
     let debutDays = todayDay - 29;
 
-    if (ageMonths < 0 || (ageMonths === 0 && ageDays < 0)) {
-      const adjustedAge = adjustAge(
-        todayYear,
-        todayMonth,
-        todayDay,
-        birthYear,
-        birthMonth,
-        birthDay
-      );
-      ageYears = adjustedAge.years;
-      ageMonths = adjustedAge.months;
-      ageDays = adjustedAge.days;
+    // Adjust negative debutMonths and debutDays
+    if (debutDays < 0) {
+      debutMonth--;
+      const daysInLastMonth = daysInMonth(todayMonth - 1, todayYear);
+      debutDays = daysInLastMonth - 29 + todayDay;
+    }
+    if (ageDays < 0) {
+      ageMonths--;
+      const daysInLastMonth = daysInMonth(todayMonth - 1, todayYear);
+      ageDays = daysInLastMonth - 29 + todayDay;
+    }
+
+    if (debutMonth < 0) {
+      debutYears--;
+      debutMonth += 12;
     }
 
     let message = `(${ageYears} ขวบ, ${ageMonths} เดือน, และ ${ageDays} วัน)`;
     let age = `${ageYears}`;
     let debutAnnment = ``;
     let debutCount = `(${debutYears} ปี, ${debutMonth} เดือน,  และ ${debutDays} วัน) `;
+
+    // ... (rest of the code remains the same)
+
+    // ... (continue with the rest of the code)
+
+    // ... (rest of the code remains the same)
 
     if (ageMonths === 0 && ageDays === 0) {
       debutCount +=
@@ -94,21 +106,19 @@
     birthMonth,
     birthDay
   ) {
-    let adjustedYears = todayYear - birthYear - 1;
-    let adjustedMonths = 12 - birthMonth + todayMonth;
-    let adjustedDays = 0;
+    let adjustedYears = todayYear - birthYear;
+    let adjustedMonths = todayMonth - birthMonth;
+    let adjustedDays = todayDay - birthDay;
 
-    if (todayDay >= birthDay) {
-      adjustedDays = todayDay - birthDay;
-    } else {
+    if (adjustedDays < 0) {
       adjustedMonths--;
       const daysInLastMonth = daysInMonth(todayMonth - 1, todayYear);
       adjustedDays = daysInLastMonth - birthDay + todayDay;
     }
 
-    if (adjustedMonths >= 12) {
-      adjustedYears++;
-      adjustedMonths -= 12;
+    if (adjustedMonths < 0) {
+      adjustedYears--;
+      adjustedMonths += 12;
     }
 
     return {
