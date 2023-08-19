@@ -1,24 +1,79 @@
+<script>
+  const statusPairs = [
+    [
+      "ไม่มีการใช้ร่างนี้แล้ว33",
+      "ml-1 bg-gray-500 text-white px-2 pt-1 -mt-1 flex-initial rounded-xl",
+    ],
+  ];
+  const modelPairs = [
+    [
+      "Model 3D3",
+      "mt-1 ml-1 bg-blue-500 text-white px-2 pt-1 flex-initial rounded-xl",
+    ],
+  ];
+
+  // StatusSection Component
+  function StatusSection(props) {
+    const statuses = props.statuses || [];
+
+    const section = document.createElement("section4");
+    section.className = "status-section4";
+
+    statuses.forEach((statusClassPair) => {
+      const p = document.createElement("p");
+      p.className = statusClassPair[1];
+      p.textContent = statusClassPair[0];
+      section.appendChild(p);
+    });
+
+    return section;
+  }
+
+  const statusSection = StatusSection({ statuses: statusPairs });
+  document.getElementById("statusSection4").appendChild(statusSection);
+
+  // ModelSection Component
+  function ModelSection(props) {
+    const models = props.models || [];
+
+    const section = document.createElement("section4");
+    section.className = "model-section4";
+
+    models.forEach((modelClassPair) => {
+      const p = document.createElement("p");
+      p.className = modelClassPair[1];
+      p.textContent = modelClassPair[0];
+      section.appendChild(p);
+    });
+
+    return section;
+  }
+
+  const modelSection = ModelSection({ models: modelPairs });
+  document.getElementById("modelSection4").appendChild(modelSection);
+</script>
+
 <div>
   <!-- Modal toggle -->
   <p
     class="block text-center mx-1 mt-1 bg-neutral-200 rounded-lg hover:bg-gray-400 justify-center items-center"
   >
     <button
-      data-modal-target="Model4"
-      data-modal-toggle="Model4"
+      data-modal-target="Model41"
+      data-modal-toggle="Model41"
       class="w-full h-full py-2"
       type="button"
     >
       <p class="text-center">
         <img class="mx-auto h-28 w-auto" src="/png/model4.0.jpg" />
-        Model4
+        Model41
       </p></button
     >
   </p>
 
   <!-- Main modal -->
   <div
-    id="Model4"
+    id="Model41"
     tabindex="-1"
     aria-hidden="true"
     class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
@@ -36,7 +91,7 @@
           <button
             type="button"
             class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-            data-modal-hide="Model4"
+            data-modal-hide="Model411"
           >
             <svg
               class="w-3 h-3"
@@ -57,24 +112,159 @@
         </div>
         <!-- Modal body -->
         <div class="p-6 space-y-6">
-          <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-            With less than a month to go before the European Union enacts new
-            consumer privacy laws for its citizens, companies around the world
-            are updating their terms of service agreements to comply.
-          </p>
+          <article>
+            <h1>ร่างที่4</h1>
+            <div class="corosel4">
+              <div
+                id="default-carousel"
+                class="dd relative w-full"
+                data-carousel="slide"
+              >
+                <!-- Carousel wrapper -->
+                <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                  <!-- Item 1 -->
+                  <div class="hidden ease-700 ease-in-out" data-carousel-item>
+                    <img
+                      src="/png/model1.0.jpg"
+                      class="h-32 md:h-96 absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                      alt="..."
+                    />
+                  </div>
+                  <!-- Item 2 -->
+                  <div class="hidden ease-700 ease-in-out" data-carousel-item>
+                    <img
+                      src="/png/Model1.1.png"
+                      class="h-32 md:h-96 absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                      alt="..."
+                    />
+                  </div>
+                  <!-- Item 3 -->
+                  <div class="hidden ease-700 ease-in-out" data-carousel-item>
+                    <img
+                      src="/png/Model1.2.png"
+                      class="h-32 md:h-96 absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="hidden ease-700 ease-in-out" data-carousel-item>
+                    <img
+                      src="/png/Model1.3.png"
+                      class="h-32 md:h-96 absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <!-- Slider indicators -->
+                <div
+                  class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2"
+                >
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                    data-carousel-slide-to="0"></button>
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full"
+                    aria-current="false"
+                    aria-label="Slide 2"
+                    data-carousel-slide-to="1"></button>
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full"
+                    aria-current="false"
+                    aria-label="Slide 3"
+                    data-carousel-slide-to="2"></button>
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full"
+                    aria-current="false"
+                    aria-label="Slide 4"
+                    data-carousel-slide-to="3"></button>
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full"
+                    aria-current="false"
+                    aria-label="Slide 5"
+                    data-carousel-slide-to="4"></button>
+                </div>
+                <!-- Slider controls -->
+                <button
+                  type="button"
+                  class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                  data-carousel-prev
+                >
+                  <span
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+                  >
+                    <svg
+                      class="w-4 h-4 text-white dark:text-gray-800"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 6 10"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 1 1 5l4 4"></path>
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                  </span>
+                </button>
+                <button
+                  type="button"
+                  class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                  data-carousel-next
+                >
+                  <span
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+                  >
+                    <svg
+                      class="w-4 h-4 text-white dark:text-gray-800"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 6 10"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 9 4-4-4-4"></path>
+                    </svg>
+                    <span class="sr-only">Next</span>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div class="flex mt-4">
+              <p class="flex-none">
+                สถานะ:<p class="flex-initial" id="statusSection4"></p>
+              </p>
+            </div><div class="flex">
+              <p class="flex-none flex-none mt-2">
+                รูปแบบ:<p id="modelSection4"></p>
+              </p><div></div>
+            </div>
+          </article>
         </div>
         <!-- Modal footer -->
         <div
           class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600"
         >
           <button
-            data-modal-hide="Model4"
+            data-modal-hide="Model2"
             type="button"
             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >I accept</button
           >
           <button
-            data-modal-hide="Model4"
+            data-modal-hide="Model2"
             type="button"
             class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
             >Decline</button
